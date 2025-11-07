@@ -5,7 +5,7 @@ const About = () => {
     <section
       id="about"
       style={{ backgroundImage: "url('./About bg gradient.png')" }}
-      className="relative container py-16   overflow-hidden bg-cover bg-center bg-no-repeat"
+      className="relative container py-16 bg-black  overflow-hidden bg-cover bg-center bg-no-repeat"
     >
       <div className=" grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
         {/* ===== Left Content ===== */}

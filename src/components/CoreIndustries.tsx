@@ -41,7 +41,7 @@ const CoreIndustries = () => {
   return (
     <section
       id="industries"
-      className="relative py-28 p bg-background overflow-hidden"
+      className="relative   bg-black overflow-hidden bg-backgroud"
     >
       <div className="container">
         {/* ===== Heading Section ===== */}
