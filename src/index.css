@@ -76,7 +76,7 @@ Fonts follow the brand typography hierarchy.
   h5,
   h6 {
     font-family: var(--font-primary);
-    font-weight: var(--font-semibold);
+    font-weight: var(--font-regular);
     line-height: 1.2;
   }
 
@@ -157,6 +157,9 @@ Fonts follow the brand typography hierarchy.
   section > * {
     position: relative;
     z-index: 1;
+  }
+  .section-container {
+    @apply mx-auto w-[90%] max-w-[1600px] px-4;
   }
 }
 

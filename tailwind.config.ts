@@ -2,17 +2,27 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
-      center: true,
-      padding: "4rem",
+      center: true, // always center the layout
+      // padding: "1rem", // base padding for small screens
       screens: {
-        "2xl": "1400px",
+        sm: "100%", // mobile: take full width
+        md: "90%", // tablets/laptops: 90% width
+        lg: "80%", // keep consistent 90%
+        xl: "80%", // for screens < 1600px, still 90%
+        "2xl": "1600px", // max width stops growing after 1600px
       },
     },
     extend: {
+      /* ------------------------------ 🎨 COLORS ------------------------------ */
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -48,37 +58,47 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+
+      /* -------------------------- 🧱 TYPOGRAPHY (Clamp) -------------------------- */
+      fontSize: {
+        h1: ["clamp(54px, 5vw, 84px)", { lineHeight: "1.1" }],
+        h2: ["clamp(96px, 7vw, 148px)", { lineHeight: "1.1" }],
+        h3: ["clamp(31px, 3vw, 48px)", { lineHeight: "1.2" }],
+        h5: ["clamp(23px, 2.5vw, 36px)", { lineHeight: "1.3" }],
+        h6: ["clamp(21px, 2vw, 32px)", { lineHeight: "1.4" }],
+        p: ["clamp(12px, 1vw, 18px)", { lineHeight: "1.6" }],
+        p2: ["clamp(14px, 1.1vw, 20px)", { lineHeight: "1.6" }],
+        p3: ["clamp(16px, 1.2vw, 24px)", { lineHeight: "1.6" }],
+      },
+
+      /* -------------------------- 🌈 GRADIENTS, SHADOWS -------------------------- */
       backgroundImage: {
-        'gradient-dark': 'var(--gradient-dark)',
-        'gradient-subtle': 'var(--gradient-subtle)',
+        "gradient-dark": "var(--gradient-dark)",
+        "gradient-subtle": "var(--gradient-subtle)",
       },
       boxShadow: {
-        'elevated': 'var(--shadow-elevated)',
+        elevated: "var(--shadow-elevated)",
       },
       transitionProperty: {
-        'smooth': 'var(--transition-smooth)',
+        smooth: "var(--transition-smooth)",
       },
+
+      /* ------------------------------ 🟢 RADIUS ------------------------------ */
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+
+      /* ---------------------------- 🎬 ANIMATIONS ---------------------------- */
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {

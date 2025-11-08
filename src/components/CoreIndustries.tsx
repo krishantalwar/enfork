@@ -41,9 +41,9 @@ const CoreIndustries = () => {
   return (
     <section
       id="industries"
-      className="relative   bg-black overflow-hidden bg-backgroud"
+      className="relative bg-black overflow-hidden bg-backgroud"
     >
-      <div className="container">
+      <div className="section-container">
         {/* ===== Heading Section ===== */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -52,10 +52,10 @@ const CoreIndustries = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-7xl font-light text-foreground mb-4">
+          <h2 className="text-h2 font-light text-foreground mb-4">
             Core Industries
           </h2>
-          <p className="text-foreground max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
+          <p className="text-foreground max-w-2xl mx-auto text-p leading-relaxed">
             Empowering businesses across technology, marketing, finance, and
             services with innovative solutions, expert strategies, and
             measurable impact.
@@ -83,14 +83,14 @@ const CoreIndustries = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="flex flex-col justify-between group relative bg-[linear-gradient(180deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.02)_100%)] 
-                           border border-white/10 rounded-[20px] p-6 md:p-8
+                           border border-white/10 rounded-[20px] p-6 md:p-4
                            backdrop-blur-[12px] shadow-[0_4px_30px_rgba(0,0,0,0.3)]
                            hover:border-white/20 hover:shadow-[0_8px_40px_rgba(0,0,0,0.4)]
-                           transition-all duration-300 h-[550px]"
+                           transition-all duration-300 h-[500px]"
               >
                 {/* Card Header */}
                 <div className="flex items-start justify-between mb-6">
-                  <h3 className="text-xl md:text-4xl text-foreground font-light leading-snug">
+                  <h3 className="text-h3 text-foreground font-light leading-snug">
                     {industry.title}
                   </h3>
                   <div className="w-7 h-7 flex items-center justify-center rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition">
@@ -100,12 +100,12 @@ const CoreIndustries = () => {
 
                 <div>
                   {/* Description */}
-                  <p className="text-sm md:text-base text-foreground font-light leading-relaxed mb-6">
+                  <p className="text-p text-foreground font-light leading-relaxed mb-6">
                     {industry.description}
                   </p>
 
                   {/* Image */}
-                  <div className="relative w-full h-[240px] rounded-xl overflow-hidden">
+                  <div className="relative w-full h-[200px] rounded-xl overflow-hidden">
                     <img
                       src={industry.image}
                       alt={industry.title}

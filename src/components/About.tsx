@@ -5,9 +5,9 @@ const About = () => {
     <section
       id="about"
       style={{ backgroundImage: "url('./About bg gradient.png')" }}
-      className="relative container py-16 bg-black  overflow-hidden bg-cover bg-center bg-no-repeat"
+      className="relative  py-16 bg-black  overflow-hidden bg-cover bg-center bg-no-repeat"
     >
-      <div className=" grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
+      <div className="section-container grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
         {/* ===== Left Content ===== */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -16,8 +16,8 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="text-left"
         >
-          <h2 className="text-5xl md:text-7xl font-light mb-4 leading-tight">
-            <span className="text-foreground font-light">About</span>
+          <h2 className="font-light mb-4 leading-tight">
+            <span className="text-h2 text-foreground font-light">About</span>
             <br />
             <a href="#" className="flex items-center gap-2 select-none">
               <img
@@ -28,7 +28,7 @@ const About = () => {
             </a>
           </h2>
 
-          <p className="text-sm md:text-base text-foreground leading-relaxed max-w-lg mt-6">
+          <p className="text-p text-foreground leading-relaxed max-w-lg mt-6">
             Enfork Group, based in Australia, drives innovation across
             technology, marketing, finance, and social initiatives. Our diverse
             brands empower businesses, communities, and individuals to grow,
