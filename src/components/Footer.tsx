@@ -12,9 +12,9 @@ const Footer = () => {
           <div className="w-full lg:w-auto">
             <img src="./logo bg 3.png" alt="logo" className="w-[140px] sm:w-[170px] lg:w-[200px]" />
 
-            <p className="text-foreground w-full max-w-[280px] sm:max-w-xs lg:w-80 text-h6 mt-6 lg:mt-10 leading-tight">
+            <h6 className="text-foreground w-full max-w-[280px] sm:max-w-xs lg:w-80 mt-6 lg:mt-10 leading-tight">
               Get the latest inspiration & insights
-            </p>
+            </h6>
 
             <div className="flex items-center py-[0.5px] pr-[0.5px] w-full max-w-md rounded-full overflow-hidden bg-white shadow-sm mt-6 lg:mt-8">
               {/* Input field */}

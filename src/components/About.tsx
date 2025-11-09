@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import BrandLogs from "../components/common/BrandLogos";
 const About = () => {
   return (
     <section
@@ -16,19 +16,19 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="text-left"
         >
-          <h2 className="font-light mb-4 leading-tight">
-            <span className="text-h2 text-foreground font-light">About</span>
+          <div className="font-light mb-4 leading-tight">
+            <h1 className="text-foreground font-light">About</h1>
             <br />
             <a href="#" className="flex items-center gap-2 select-none">
               <img
                 src="./logo bg 2.png"
                 alt="Enfork"
-                className="w-[200px] sm:w-[250px] lg:w-[300px] h-auto object-contain"
+                className="w-[150px] sm:w-[200px] lg:w-[250px] xl:w-[300px] 2xl:w-[400px] h-auto object-contain"
               />
             </a>
-          </h2>
+          </div>
 
-          <p className="text-p text-foreground leading-relaxed max-w-lg mt-4 sm:mt-5 lg:mt-6">
+          <p className="text-foreground leading-relaxed max-w-lg  lg:max-w-2xl mt-4 sm:mt-5 lg:mt-6">
             Enfork Group, based in Australia, drives innovation across
             technology, marketing, finance, and social initiatives. Our diverse
             brands empower businesses, communities, and individuals to grow,
@@ -44,7 +44,7 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative flex justify-center lg:justify-end mt-8 lg:mt-0"
         >
-          <div className="relative w-full max-w-[320px] sm:max-w-md md:max-w-lg lg:max-w-2xl h-[300px] sm:h-[350px] md:h-[400px] lg:h-[440px] xl:h-[480px] flex justify-center items-center mx-auto">
+          <div className="relative hidden lg:block w-full max-w-[320px] sm:max-w-md md:max-w-lg lg:max-w-2xl h-[300px] sm:h-[350px] md:h-[400px] lg:h-[440px] xl:h-[480px] flex justify-center items-center mx-auto">
             {/* === Floating Brand Cards === */}
 
             {/* Card 1 */}
@@ -132,7 +132,7 @@ const About = () => {
 
             {/* Card 7 */}
             <motion.div
-              className="absolute top-[130px] sm:top-[145px] md:top-[160px] lg:top-[180px] left-[160px] sm:left-[185px] md:left-[150px] lg:left-[150px] bg-background border border-white/10 
+              className="absolute top-[130px] sm:top-[145px] md:top-[160px] lg:top-[180px] left-[160px] sm:left-[185px] md:left-[150px] lg:left-[150px] 2xl:left-[300px]  bg-background border border-white/10 
                    rounded-full shadow-lg flex items-center justify-center 
                    w-[110px] sm:w-[120px] md:w-[135px] lg:w-[150px] h-[50px] sm:h-[55px] md:h-[60px]"
               style={{ rotate: "5deg" }}
@@ -143,6 +143,9 @@ const About = () => {
                 className="w-[50px] sm:w-[55px] md:w-[62px] lg:w-[70px] object-contain"
               />
             </motion.div>
+          </div>
+          <div className="w-full lg:hidden">
+            <BrandLogs />
           </div>
         </motion.div>
       </div>

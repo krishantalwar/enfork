@@ -5,37 +5,35 @@ const OurVentures = () => {
   return (
     <section
       id="ventures"
-      style={{ backgroundImage: "url('./Hero background.png')" }}
-      className="py-10 relative overflow-hidden bg-no-repeat "
+      // style={{ backgroundImage: "url('./Hero background.png')" }}
+      className="py-10  relative overflow-hidden bg-no-repeat "
     >
       <div className="p">
         <div className="relative overflow-hidden">
-          <h2 className="text-h2 font-light text-foreground text-center py-10 md:py-16 lg:py-20">
+          <h1 className="font-light text-foreground text-center py-10 md:py-16 lg:py-20">
             Our Ventures
-          </h2>
+          </h1>
         </div>
 
         {/* Cards */}
         <div className="section-container flex flex-col space-y-8 md:space-y-12 mt-4 md:mt-8">
           {/* Cards -1 */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap- 8">
             {/* ===== Left Content Card ===== */}
             <div
               style={{ backgroundImage: "url('./ventures/bg 2.png')" }}
-              className="relative lg:col-span-2 bg-[#0e0e0e]/90 rounded-2xl p-6 md:p-8 lg:p-12 border border-white/10 text-white shadow-lg backdrop-blur-sm py-12 md:py-16 bg-center bg-no-repeat"
+              className="relative lg:col-span-2 bg-[#0e0e0e]/90 rounded-2xl p-6 md:p-8 lg:p-12 border border-white/50 text-white shadow-lg backdrop-blur-sm py-12 md:py-16 bg-center bg-no-repeat"
             >
               {/* Background Pattern Overlay */}
               <div
-                className="absolute inset-0 opacity-10 bg-[url('/brand-icons-bg.png')] bg-cover bg-center rounded-2xl"
+                className="absolute inset-0 opacity-10 bg-[url('/brand-icons-bg.png')] bg-cover bg-center rounded-2xl "
                 aria-hidden="true"
               ></div>
 
               {/* Content */}
-              <div className="relative z-10">
-                <h2 className="text-2xl md:text-3xl lg:text-h3 mb-3 md:mb-4">
-                  Enfork Creations
-                </h2>
-                <p className="text-foreground text-p w-full lg:w-2/3 leading-relaxed mb-6 md:mb-8">
+              <div className="relative z-10 xl:mt-16">
+                <h3 className=" mb-3 md:mb-4">Enfork Creations</h3>
+                <p className="text-foreground  w-full lg:w-2/3 leading-relaxed mb-6 md:mb-8">
                   Enfork Creations crafts compelling marketing campaigns and
                   brand strategies that captivate audiences, boost engagement,
                   and drive measurable growth worldwide.
@@ -54,7 +52,7 @@ const OurVentures = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="relative rounded-2xl overflow-hidden shadow-xl min-h-[300px] md:min-h-[400px] lg:min-h-0"
+              className="relative rounded-2xl overflow-hidden shadow-xl min-h-[300px] md:min-h-[400px]"
             >
               <video
                 autoPlay
@@ -109,7 +107,7 @@ const OurVentures = () => {
             {/* ===== Right Content Card ===== */}
             <div
               style={{ backgroundImage: "url('./ventures/bg 1.png')" }}
-              className="relative lg:col-span-2 rounded-2xl p-6 md:p-8 lg:p-12 border border-white/10 text-foreground shadow-lg backdrop-blur-sm py-12 md:py-16 bg-center lg:order-2 order-1"
+              className="relative lg:col-span-2 rounded-2xl p-6 md:p-8 lg:p-12 border border-white/50 text-foreground shadow-lg backdrop-blur-sm py-12 md:py-16 bg-center lg:order-2 order-1"
             >
               <div
                 className="absolute inset-0 opacity-10 bg-[url('/brand-icons-bg.png')] bg-cover bg-center rounded-2xl"
@@ -117,11 +115,9 @@ const OurVentures = () => {
               ></div>
 
               {/* Content */}
-              <div className="relative z-10">
-                <h2 className="text-h3 mb-3 md:mb-4">
-                  Bolly Beats
-                </h2>
-                <p className="text-foreground text-p w-full lg:w-2/3 leading-relaxed mb-6 md:mb-8">
+              <div className="relative z-10 xl:mt-16">
+                <h3 className=" mb-3 md:mb-4">Bolly Beats</h3>
+                <p className="text-foreground  w-full lg:w-2/3 leading-relaxed mb-6 md:mb-8">
                   Bolly Beats creates high-energy social campaigns and immersive
                   event experiences that ignite buzz, celebrate culture, and
                   connect brands with audiences in meaningful ways.
@@ -137,9 +133,9 @@ const OurVentures = () => {
           </div>
 
           {/* card-3 */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8  ">
             {/* ===== Left Content Card ===== */}
-            <div className="relative lg:col-span-2 bg-[#0e0e0e]/90 rounded-2xl p-6 md:p-8 lg:p-12 border border-white/10 text-white shadow-lg backdrop-blur-sm py-12 md:py-16">
+            <div className="relative lg:col-span-2 bg-[#0e0e0e]/90 rounded-2xl p-6 md:p-8 lg:p-12 border border-white/50 text-white shadow-lg backdrop-blur-sm py-12 md:py-16">
               {/* Background Pattern Overlay */}
               <div
                 className="absolute inset-0 opacity-10 bg-[url('/brand-icons-bg.png')] bg-cover bg-center rounded-2xl"
@@ -147,11 +143,9 @@ const OurVentures = () => {
               ></div>
 
               {/* Content */}
-              <div className="relative z-10">
-                <h2 className="text-2xl md:text-3xl lg:text-h3 mb-3 md:mb-4">
-                  Enfork Care
-                </h2>
-                <p className="text-foreground text-sm md:text-base lg:text-p w-full lg:w-2/3 leading-relaxed mb-6 md:mb-8">
+              <div className="relative z-10 xl:mt-16">
+                <h3 className=" mb-3 md:mb-4">Enfork Care</h3>
+                <p className="text-foreground  w-full lg:w-2/3 leading-relaxed mb-6 md:mb-8">
                   Enfork Care provides holistic home and personal care services
                   designed to support well-being, comfort, and daily
                   independence. Our caregivers deliver empathy-driven assistance

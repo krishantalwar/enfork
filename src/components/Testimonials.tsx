@@ -69,8 +69,8 @@ const Testimonials = () => {
             transition={{ duration: 0.6 }}
             className="space-y-3 md:space-y-4 section-container"
           >
-            <h2 className="text-h2  tracking-tight">Testimonials</h2>
-            <p className="max-w-2xl mx-auto text-p leading-relaxed">
+            <h1 className="tracking-tight">Testimonials</h1>
+            <p className="max-w-2xl mx-auto  leading-relaxed">
               Our relationships define us. These reflections highlight the care,
               craftsmanship, and dedication we bring to every brand, every
               project, and every individual we serve.
@@ -120,14 +120,12 @@ const Testimonials = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
-                  className="relative bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 w-full md:w-[600px] text-left shadow-xl"
+                  className="relative bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 w-full md:w-[600px] text-left shadow-xl lg:p-12"
                 >
                   <Quote className="absolute top-4 right-4 md:top-6 md:right-6 w-6 h-6 md:w-8 md:h-8 text-white/10" />
 
-                  <h3 className="text-lg md:text-xl font-semibold mb-2">
-                    Problem Solvers
-                  </h3>
-                  <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-4">
+                  <h6 className=" font-semibold mb-2">Problem Solvers</h6>
+                  <p className="2xl:text-w-[24px] leading-relaxed mb-4">
                     With having a fleet business you need to have consistent
                     leads and thanks to Pav and team for getting this sorted.
                     Empty garage looks perfect!!

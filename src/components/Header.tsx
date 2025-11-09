@@ -36,13 +36,13 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-lg border-b border-white/10"
+      className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-lg border-b border-white/10"
     >
       <div className="section-container flex items-center justify-between py-3 sm:py-4 md:py-5 lg:py-6 relative">
         {/* === Logo === */}
         <a href="#" className="flex items-center gap-2 select-none z-50">
           <img
-            src="./logo bg 2.png"
+            src="./logo bg 3.png"
             alt="Enfork"
             className="w-[120px] sm:w-[130px] h-auto object-contain"
           />

@@ -2,18 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================
+🎨 Enfork Brand Design System
+===============================
+All colors defined in HSL for flexibility.
+Fonts follow the brand typography hierarchy.
+=============================== */
+
 /* Import brand fonts */
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap");
 
-/* 
-─────────────────────────────
-🎨 Enfork Brand Design System
-─────────────────────────────
-All colors defined in HSL for flexibility.
-Fonts follow the brand typography hierarchy.
-─────────────────────────────
-*/
-
+/* =====================================
+   🌈 Base Layer (Design Tokens & Typography)
+===================================== */
 @layer base {
   :root {
     /* === Brand Colors (in HSL) === */
@@ -24,7 +25,6 @@ Fonts follow the brand typography hierarchy.
 
     --card: 0 0% 10%;
     --card-foreground: 0 0% 98%;
-
     --popover: 0 0% 10%;
     --popover-foreground: 0 0% 98%;
 
@@ -36,7 +36,6 @@ Fonts follow the brand typography hierarchy.
 
     --muted: 0 0% 18%;
     --muted-foreground: 0 0% 60%;
-
     --accent: 0 0% 18%;
     --accent-foreground: 0 0% 98%;
 
@@ -63,12 +62,149 @@ Fonts follow the brand typography hierarchy.
     --font-semibold: 600;
   }
 
-  /* Global base reset */
+  /* === Global base reset === */
   * {
     @apply border-border;
   }
 
-  /* Heading hierarchy (for consistent typography scale) */
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-primary);
+  }
+
+  /* =============================
+     📏 Typography (Semantic, Responsive)
+  ============================== */
+
+   /* === H1 (Hero / Page Title) === */
+  h1 {
+    font-size: 2.25rem; /* 36px */
+    line-height: 1.1;
+    font-weight: 600;
+  }
+  @media (min-width: 640px) {
+    h1 { font-size: 3.5rem; } /* 56px */
+  }
+  @media (min-width: 1024px) {
+    h1 { font-size: 5rem; } /* 80px */
+  }
+  @media (min-width: 1400px) {
+    h1 { font-size: 7.25rem; } /* 116px */
+  }
+  @media (min-width: 1800px) {
+    h1 { font-size: 9.25rem; } /* 148px — Figma */
+  }
+
+  /* === H2 (Section Title) === */
+  h2 {
+    font-size: 1.75rem; /* 28px */
+    line-height: 1.15;
+    font-weight: 500;
+  }
+  @media (min-width: 640px) {
+    h2 { font-size: 2.25rem; } /* 36px */
+  }
+  @media (min-width: 1024px) {
+    h2 { font-size: 3rem; } /* 48px */
+  }
+  @media (min-width: 1400px) {
+    h2 { font-size: 4rem; } /* 64px */
+  }
+  @media (min-width: 1800px) {
+    h2 { font-size: 5.25rem; } /* 84px */
+  }
+
+  /* === H3 (Sub Section Title) === */
+  h3 {
+    font-size: 1.375rem; /* 22px */
+    line-height: 1.25;
+  }
+  @media (min-width: 640px) {
+    h3 { font-size: 1.75rem; } /* 28px */
+  }
+  @media (min-width: 1024px) {
+    h3 { font-size: 2rem; } /* 32px */
+  }
+  @media (min-width: 1400px) {
+    h3 { font-size: 3rem; } /* 48px */
+  }
+  @media (min-width: 1800px) {
+    h3 { font-size: 3.5rem; } /* 56px */
+  }
+
+  /* === H4 === */
+  h4 {
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.3;
+  }
+  @media (min-width: 640px) {
+    h4 { font-size: 1.5rem; } /* 24px */
+  }
+  @media (min-width: 1024px) {
+    h4 { font-size: 1.75rem; } /* 28px */
+  }
+  @media (min-width: 1400px) {
+    h4 { font-size: 2.25rem; } /* 36px */
+  }
+  @media (min-width: 1800px) {
+    h4 { font-size: 2.5rem; } /* 40px */
+  }
+
+  /* === H5 === */
+  h5 {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.35;
+  }
+  @media (min-width: 640px) {
+    h5 { font-size: 1.25rem; } /* 20px */
+  }
+  @media (min-width: 1024px) {
+    h5 { font-size: 1.5rem; } /* 24px */
+  }
+  @media (min-width: 1400px) {
+    h5 { font-size: 2rem; } /* 32px */
+  }
+  @media (min-width: 1800px) {
+    h5 { font-size: 2.25rem; } /* 36px */
+  }
+
+  /* === H6 === */
+  h6 {
+    font-size: 1rem; /* 16px */
+    line-height: 1.4;
+  }
+  @media (min-width: 640px) {
+    h6 { font-size: 1.125rem; } /* 18px */
+  }
+  @media (min-width: 1024px) {
+    h6 { font-size: 1.25rem; } /* 20px */
+  }
+  @media (min-width: 1400px) {
+    h6 { font-size: 1.75rem; } /* 28px */
+  }
+  @media (min-width: 1800px) {
+    h6 { font-size: 2rem; } /* 32px */
+  }
+
+  /* === Paragraph === */
+  p {
+    font-size: 0.875rem; /* 14px */
+    line-height: 1;
+  }
+  @media (min-width: 640px) {
+    p { font-size: 0.875rem; } /* 14px */
+  }
+  @media (min-width: 1024px) {
+    p { font-size: 0.875rem; } /* 14x */
+  }
+  @media (min-width: 1400px) {
+    p { font-size: 1.125rem; } /* 18px */
+  }
+  @media (min-width: 1800px) {
+    p { font-size: 1.25rem; } /* 20px */
+  }
+  /* Shared Typography Properties */
   h1,
   h2,
   h3,
@@ -77,10 +213,17 @@ Fonts follow the brand typography hierarchy.
   h6 {
     font-family: var(--font-primary);
     font-weight: var(--font-regular);
-    line-height: 1.2;
+    color: hsl(var(--foreground));
   }
 
-  /* Ensure all interactive elements inherit the font */
+  p,
+  span,
+  li {
+    font-family: var(--font-primary);
+    font-weight: var(--font-regular);
+    color: hsl(var(--foreground));
+  }
+
   a,
   button,
   input,
@@ -91,14 +234,6 @@ Fonts follow the brand typography hierarchy.
     color: inherit;
   }
 
-  p,
-  span,
-  li {
-    font-family: var(--font-primary);
-    font-weight: var(--font-regular);
-    line-height: 1.6;
-  }
-
   /* Numbers / stats / metrics */
   .font-numeric {
     font-family: var(--font-secondary);
@@ -107,7 +242,9 @@ Fonts follow the brand typography hierarchy.
   }
 }
 
-/* Section background lighting effects (same as before) */
+/* ====================================
+   💡 Components Layer (Sections, Layout)
+==================================== */
 @layer components {
   section {
     position: relative;
@@ -158,12 +295,15 @@ Fonts follow the brand typography hierarchy.
     position: relative;
     z-index: 1;
   }
+
   .section-container {
     @apply mx-auto w-[90%] max-w-[1600px] px-4;
   }
 }
 
-/* Reduced motion accessibility */
+/* ====================================
+   🧩 Accessibility Layer
+==================================== */
 @media (prefers-reduced-motion: reduce) {
   @layer components {
     section::before,
@@ -177,8 +317,10 @@ Fonts follow the brand typography hierarchy.
     }
   }
 }
-/* Swiper Stye code  */
-/* === Swiper Navigation Buttons - Outside the Cards === */
+
+/* ====================================
+   🎠 Swiper Custom Styling
+==================================== */
 .swiper-button-next,
 .swiper-button-prev {
   background: rgba(255, 255, 255, 0.05);
@@ -194,7 +336,6 @@ Fonts follow the brand typography hierarchy.
   z-index: 10;
 }
 
-/* Hover State */
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   background: rgba(255, 255, 255, 0.12);
@@ -203,23 +344,20 @@ Fonts follow the brand typography hierarchy.
   border-color: rgba(255, 255, 255, 0.25);
 }
 
-/* Icon size */
 .swiper-button-next::after,
 .swiper-button-prev::after {
   font-size: 12px !important;
   font-weight: 600;
 }
 
-/* Position: arrows slightly outside container */
 .swiper-button-prev {
-  left: -55px !important; /* ✅ Arrow sits just outside left edge */
+  left: -55px !important;
 }
 
 .swiper-button-next {
-  right: -55px !important; /* ✅ Arrow sits outside last card */
+  right: -55px !important;
 }
 
-/* Hide arrows on small screens */
 @media (max-width: 768px) {
   .swiper-button-next,
   .swiper-button-prev {
@@ -227,7 +365,6 @@ Fonts follow the brand typography hierarchy.
   }
 }
 
-/* Pagination Dots */
 .swiper-pagination-bullet {
   background: rgba(255, 255, 255, 0.25);
   opacity: 1;

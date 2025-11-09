@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
@@ -37,8 +38,8 @@ const Projects = () => {
       <div className="section-container">
         {/* ===== Header ===== */}
         <div className="flex flex-col md:flex-row items-start md:items-end gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-10 lg:mb-12">
-          <h2 className="text-h2 font-light tracking-tight">Our Projects</h2>
-          <p className="text-foreground md:mt-0 max-w-xs leading-relaxed text-p">
+          <h1 className="font-light tracking-tight">Our Projects</h1>
+          <p className="text-foreground md:mt-0 max-w-xs leading-relaxed">
             Read how we've helped some of the biggest brands transform their
             business
           </p>
@@ -59,13 +60,17 @@ const Projects = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-[240px] sm:h-[280px] lg:h-[300px] object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-[240px] sm:h-[280px] lg:h-[300px] object-cover rounded-2xl transition-transform duration-500 "
                 />
 
                 {/* Arrow Button */}
-                <button className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 backdrop-blur-md">
+                <Link
+                  to="/blogs"
+                  className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 w-9 h-9 sm:w-10 sm:h-10 lg:right-4  xl:right-4 flex items-center justify-center 
+             rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 backdrop-blur-md"
+                >
                   <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-                </button>
+                </Link>
               </div>
 
               {/* Project Details */}
@@ -83,10 +88,10 @@ const Projects = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-h3 mb-2">{project.title}</h3>
+                <h3 className=" mb-2">{project.title}</h3>
 
                 {/* Description */}
-                <p className="text-xs sm:text-sm leading-relaxed mb-4 max-w-lg">
+                <p className=" leading-relaxed mb-4 max-w-lg">
                   {project.description}
                 </p>
 

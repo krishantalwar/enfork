@@ -69,17 +69,17 @@ export const FAQ: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
             {/* Left Column */}
             <div className="space-y-6 sm:space-y-8">
-              <h2 className="text-h2 font-light leading-tight text-foreground tracking-wide mb-6 sm:mb-8 lg:mb-12">
+              <h1 className="font-light leading-tight text-foreground tracking-wide mb-6 sm:mb-8 lg:mb-12">
                 FAQs
-              </h2>
+              </h1>
 
-              <p className="text-xs sm:text-sm text-foreground max-w-md">
+              <p className="text-foreground max-w-md">
                 Find quick answers about our brands, services, and how we can
                 help you succeed. Clear, simple, and always at your fingertips.
               </p>
 
               <div className="space-y-2">
-                <p className="text-white text-xs sm:text-sm font-light">
+                <p className="text-foreground font-light">
                   Still Have Questions?
                   <br />
                   We're here to assist you — with clarity, confidence, and care.
@@ -106,11 +106,11 @@ export const FAQ: React.FC = () => {
                       className="w-[32px] sm:w-[36px] lg:w-[40px] flex-shrink-0"
                     />
                     <div className="flex-1">
-                      <h3 className="text-h6 text-foreground font-normal group-hover:text-gray-300 transition-colors duration-200">
+                      <h6 className="text-foreground font-normal group-hover:text-gray-300 transition-colors duration-200">
                         {item.question}
-                      </h3>
+                      </h6>
                       {openIndex === index && (
-                        <p className="text-xs sm:text-sm text-foreground mt-3 sm:mt-4 leading-relaxed animate-in fade-in slide-in-from-top-2 duration-300">
+                        <p className=" text-foreground mt-3 sm:mt-4 leading-relaxed animate-in fade-in slide-in-from-top-2 duration-300">
                           {item.answer}
                         </p>
                       )}
@@ -130,7 +130,7 @@ export const FAQ: React.FC = () => {
         {/* ====== CTA Card ====== */}
         <div
           style={{ backgroundImage: "url('./talk oppurnity bg.png')" }}
-          className="relative shadow-2xl bg-center  rounded-2xl flex flex-col md:flex-row items-center justify-between px-6 sm:px-8 md:px-16 py-8 md:py-0 min-h-[280px] sm:min-h-[300px] md:h-[300px] mt-32 sm:mt-40 md:mt-48 lg:mt-64 "
+          className="relative shadow-2xl bg-center  rounded-2xl flex flex-col-reverse md:flex-row items-center justify-between px-6 sm:px-8 md:px-16 py-8 md:py-0 min-h-[400px] sm:min-h-[300px] md:h-[300px] mt-32 sm:mt-40 md:mt-48 lg:mt-64 "
         >
           {/* Backgroudn images */}
           <div className="absolute -top-64 -lg:top-64 -left-10 -lg:left-32 w-[150px] lg:w-[350px]">
@@ -165,7 +165,7 @@ export const FAQ: React.FC = () => {
           </div>
           {/* ===== Left Content ===== */}
           <div className=" relative z-10 w-full md:w-2/3 space-y-3 sm:space-y-4 lg:space-y-5 text-foreground">
-            <h2 className="text-h3">We're ready to talk opportunities</h2>
+            <h3 className="text-h3">We're ready to talk opportunities</h3>
             <p className="text-xs sm:text-sm md:text-base max-w-[400px] leading-relaxed">
               Book a free consultation and discover how our brands can help you
               grow, innovate, and succeed. No obligations, just expert guidance.
@@ -179,14 +179,14 @@ export const FAQ: React.FC = () => {
           </div>
 
           {/* ===== Right Side: Man Image ===== */}
-          <div className="relative w-full md:w-1/3 flex justify-center md:justify-end mt-8 md:mt-0 h-[180px] sm:h-[220px]  md:h-[300px] lg:h-[20] z-[5]">
+          <div className="relative w-full md:w-1/3 flex justify-center md:justify-end -mt-16 md:mt-0 h-[180px] sm:h-[220px]  md:h-[300px] lg:h-[20] z-[5]">
             <motion.img
               src="/CTA image.png"
               alt="Man making call gesture"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="absolute bottom-0 right-0 w-[180px] sm:w-[220px] md:w-[300px] lg:w-[400px] h-auto z-20 drop-shadow-2xl  "
+              className="absolute object-cover bottom-0 right-0 w-[180px] sm:w-[220px] md:w-[300px] lg:w-[400px] h-auto z-20 drop-shadow-2xl  "
             />
           </div>
         </div>
