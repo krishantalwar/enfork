@@ -10,10 +10,9 @@ import ContactCTA from "@/components/ContactCTA";
 import Projects from "@/components/Projects";
 import Footer from "@/components/Footer";
 import OurVentures from "@/components/OurVentures";
-
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-black">
       <Header />
       <Hero />
       <About />
@@ -23,6 +22,9 @@ const Index = () => {
       <FAQs />
       <Projects />
       <Footer />
+
+   
+
     </div>
   );
 };
