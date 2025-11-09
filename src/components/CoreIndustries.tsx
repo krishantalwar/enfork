@@ -136,17 +136,16 @@ const CoreIndustries = () => {
                             "url('./Core industries section/card bg.png')",
                         }
                   }
-                  className="rounded-2xl sm:rounded-[20px] bg-center bg-cover h-full"
+                  className="rounded-2xl sm:rounded-[20px] bg-center  h-full"
                 >
                   <div
                     className="flex flex-col justify-between group relative 
                              border border-white/10 rounded-2xl sm:rounded-[20px] 
                              p-5 sm:p-6 lg:p-7
-                             backdrop-blur-[12px] 
                              shadow-[0_4px_20px_rgba(0,0,0,0.3)]
                              hover:border-white/20 hover:shadow-[0_8px_40px_rgba(0,0,0,0.4)]
                              transition-all duration-300
-                             h-full min-h-[380px] sm:min-h-[420px] md:min-h-[460px] lg:h-[500px]"
+                             h-full min-h-[380px] sm:min-h-[420px] md:min-h-[460px] lg:h-[46000px] xl:h-[500px]"
                   >
                     {/* ===== Card Header ===== */}
                     <div className="flex items-start justify-between mb-4 sm:mb-6">
@@ -165,7 +164,7 @@ const CoreIndustries = () => {
                       </p>
 
                       {/* ===== Image ===== */}
-                      <div className="relative w-full h-[140px] sm:h-[160px] md:h-[180px] lg:h-[200px] rounded-xl overflow-hidden">
+                      <div className="relative w-full  rounded-xl overflow-hidden">
                         <img
                           src={industry.image}
                           alt={
@@ -173,7 +172,7 @@ const CoreIndustries = () => {
                               ? industry.title
                               : "Industry image"
                           }
-                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 "
                         />
                       </div>
                     </div>

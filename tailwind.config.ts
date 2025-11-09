@@ -62,7 +62,7 @@ export default {
       /* -------------------------- 🧱 TYPOGRAPHY (Clamp) -------------------------- */
       fontSize: {
         h1: ["clamp(36px, 4.5vw, 84px)", { lineHeight: "1.1" }],
-        h2: ["clamp(56px, 5vw, 148px)", { lineHeight: "1.1" }],
+        h2: ["clamp(40px, 5vw, 148px)", { lineHeight: "1.1" }],
         h3: ["clamp(24px, 3.2vw, 48px)", { lineHeight: "1.2" }],
         h5: ["clamp(18px, 2vw, 36px)", { lineHeight: "1.3" }],
         h6: ["clamp(16px, 1.8vw, 32px)", { lineHeight: "1.4" }],

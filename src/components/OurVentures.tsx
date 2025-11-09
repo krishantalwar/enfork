@@ -6,7 +6,7 @@ const OurVentures = () => {
     <section
       id="ventures"
       style={{ backgroundImage: "url('./Hero background.png')" }}
-      className="py-10 relative overflow-hidden"
+      className="py-10 relative overflow-hidden bg-no-repeat "
     >
       <div className="p">
         <div className="relative overflow-hidden">

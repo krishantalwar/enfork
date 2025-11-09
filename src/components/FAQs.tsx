@@ -130,10 +130,10 @@ export const FAQ: React.FC = () => {
         {/* ====== CTA Card ====== */}
         <div
           style={{ backgroundImage: "url('./talk oppurnity bg.png')" }}
-          className="relative shadow-2xl  rounded-2xl flex flex-col md:flex-row items-center justify-between px-6 sm:px-8 md:px-16 py-8 md:py-0 min-h-[280px] sm:min-h-[300px] md:h-[300px] mt-32 sm:mt-40 md:mt-48 lg:mt-64 "
+          className="relative shadow-2xl bg-center  rounded-2xl flex flex-col md:flex-row items-center justify-between px-6 sm:px-8 md:px-16 py-8 md:py-0 min-h-[280px] sm:min-h-[300px] md:h-[300px] mt-32 sm:mt-40 md:mt-48 lg:mt-64 "
         >
           {/* Backgroudn images */}
-          <div className="absolute -top-64 -left-32 w-[350px]">
+          <div className="absolute -top-64 -lg:top-64 -left-10 -lg:left-32 w-[150px] lg:w-[350px]">
             <motion.img
               src="./Enfork page bg elemts/FAQ bg ui.png"
               alt="background-images"
@@ -148,7 +148,7 @@ export const FAQ: React.FC = () => {
               }}
             />
           </div>
-          <div className="absolute top-40 -right-40 w-[350px]">
+          <div className="absolute -bottom-24 lg:top-40 -right-20 lg:-right-40 w-[150px] lg:w-[350px]">
             <motion.img
               src="./Enfork page bg elemts/bg object 9.png"
               alt="background-images"
@@ -186,7 +186,7 @@ export const FAQ: React.FC = () => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="absolute bottom-0 right-0 w-[180px] sm:w-[220px] md:w-[300px] lg:w-[400px] h-auto z-20 drop-shadow-2xl "
+              className="absolute bottom-0 right-0 w-[180px] sm:w-[220px] md:w-[300px] lg:w-[400px] h-auto z-20 drop-shadow-2xl  "
             />
           </div>
         </div>

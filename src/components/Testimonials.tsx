@@ -30,7 +30,7 @@ const Testimonials = () => {
   return (
     <section className="relative py-10 md:py-16 lg:py-24 text-white text-center overflow-hidden">
       {/* background images */}
-      <div className="absolute top-0 -left-24 w-[350px]">
+      <div className="absolute top-0 -left-10 lg:-left-24 w-[150px] lg:w-[350px]">
         <motion.img
           src="./Enfork page bg elemts/bg object 6.png"
           alt="background-images"
@@ -45,7 +45,7 @@ const Testimonials = () => {
           }}
         />
       </div>
-      <div className="absolute top-64 -right-24 w-[350px]">
+      <div className="absolute top-64 -right-10 lg:-right-24 w-[150px] lg:w-[350px]">
         <motion.img
           src="./Enfork page bg elemts/bg object 8.png"
           alt="background-images"
@@ -69,7 +69,7 @@ const Testimonials = () => {
             transition={{ duration: 0.6 }}
             className="space-y-3 md:space-y-4 section-container"
           >
-            <h2 className="text-h2 tracking-tight">Testimonials</h2>
+            <h2 className="text-h2  tracking-tight">Testimonials</h2>
             <p className="max-w-2xl mx-auto text-p leading-relaxed">
               Our relationships define us. These reflections highlight the care,
               craftsmanship, and dedication we bring to every brand, every
