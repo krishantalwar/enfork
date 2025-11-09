@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "../ui/button";
 
+
 const AppButton = ({
   label,
   onClick,
@@ -14,7 +15,7 @@ const AppButton = ({
         <Button
           size="lg"
           variant="outline"
-          className={`text-p2 font-semibold rounded-full bg-black text-foreground px-7 py-2 hover:bg-white/10 transition-colors !${className}`}
+          className={`text-p2 font-semibold rounded-full bg-black text-foreground !px-7 py-2 hover:bg-white/10 transition-colors  !${className}`}
         >
           {label}
           {icon && (
@@ -28,7 +29,7 @@ const AppButton = ({
       ) : (
         <Button
           size="lg"
-          className={`text-p2 font-semibold rounded-full bg-[hsl(var(--muted))] text-foreground  px-7 py-2 hover:bg-white/20 transition-colors !${className}`}
+          className={`text-p2 font-semibold rounded-full text-foreground  !px-7 py-2 hover:bg-white/20  !${className}`}
         >
           {label}
         </Button>

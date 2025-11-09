@@ -61,14 +61,13 @@ export default {
 
       /* -------------------------- 🧱 TYPOGRAPHY (Clamp) -------------------------- */
       fontSize: {
-        h1: ["clamp(54px, 5vw, 84px)", { lineHeight: "1.1" }],
-        h2: ["clamp(96px, 7vw, 148px)", { lineHeight: "1.1" }],
-        h3: ["clamp(31px, 3vw, 48px)", { lineHeight: "1.2" }],
-        h5: ["clamp(23px, 2.5vw, 36px)", { lineHeight: "1.3" }],
-        h6: ["clamp(21px, 2vw, 32px)", { lineHeight: "1.4" }],
+        h1: ["clamp(36px, 4.5vw, 84px)", { lineHeight: "1.1" }],
+        h2: ["clamp(56px, 5vw, 148px)", { lineHeight: "1.1" }],
+        h3: ["clamp(24px, 3.2vw, 48px)", { lineHeight: "1.2" }],
+        h5: ["clamp(18px, 2vw, 36px)", { lineHeight: "1.3" }],
+        h6: ["clamp(16px, 1.8vw, 32px)", { lineHeight: "1.4" }],
         p: ["clamp(12px, 1vw, 18px)", { lineHeight: "1.6" }],
-        p2: ["clamp(14px, 1.1vw, 20px)", { lineHeight: "1.6" }],
-        p3: ["clamp(16px, 1.2vw, 24px)", { lineHeight: "1.6" }],
+        p1: ["clamp(14px, 1.1vw, 20px)", { lineHeight: "1.6" }],
       },
 
       /* -------------------------- 🌈 GRADIENTS, SHADOWS -------------------------- */

@@ -5,9 +5,9 @@ const About = () => {
     <section
       id="about"
       style={{ backgroundImage: "url('./About bg gradient.png')" }}
-      className="relative  py-16 bg-black  overflow-hidden bg-cover bg-center bg-no-repeat"
+      className="relative py-12 sm:py-14 lg:py-16 bg-black overflow-hidden bg-cover bg-center bg-no-repeat"
     >
-      <div className="section-container grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
+      <div className="section-container grid grid-cols-1 lg:grid-cols-2 items-center gap-8 sm:gap-12 lg:gap-16">
         {/* ===== Left Content ===== */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -23,12 +23,12 @@ const About = () => {
               <img
                 src="./logo bg 2.png"
                 alt="Enfork"
-                className="w-[300px] h-auto object-contain"
+                className="w-[200px] sm:w-[250px] lg:w-[300px] h-auto object-contain"
               />
             </a>
           </h2>
 
-          <p className="text-p text-foreground leading-relaxed max-w-lg mt-6">
+          <p className="text-p text-foreground leading-relaxed max-w-lg mt-4 sm:mt-5 lg:mt-6">
             Enfork Group, based in Australia, drives innovation across
             technology, marketing, finance, and social initiatives. Our diverse
             brands empower businesses, communities, and individuals to grow,
@@ -42,104 +42,105 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative flex justify-center lg:justify-end"
+          className="relative flex justify-center lg:justify-end mt-8 lg:mt-0"
         >
-          <div className="relative w-full max-w-2xl h-[400px] sm:h-[440px] md:h-[480px] flex justify-center items-center mx-auto">
+          <div className="relative w-full max-w-[320px] sm:max-w-md md:max-w-lg lg:max-w-2xl h-[300px] sm:h-[350px] md:h-[400px] lg:h-[440px] xl:h-[480px] flex justify-center items-center mx-auto">
             {/* === Floating Brand Cards === */}
 
             {/* Card 1 */}
             <motion.div
-              className="absolute top-[115px] right-[-90px] bg-background border border-white/10 
+              className="absolute top-[85px] sm:top-[95px] md:top-[105px] lg:top-[115px] right-[-50px] sm:right-[-70px] md:right-[-80px] lg:right-[-90px] bg-background border border-white/10 
                    rounded-full shadow-lg flex items-center justify-center 
-                   w-[160px] sm:w-[180px] md:w-[200px] h-[60px] sm:h-[50px]"
+                   w-[120px] sm:w-[140px] md:w-[160px] lg:w-[180px] xl:w-[200px] h-[45px] sm:h-[48px] md:h-[50px]"
               style={{ rotate: "-12deg" }}
             >
               <img
                 src="./brand logos/Frame 22.png"
                 alt="Enfork Creations"
-                className="w-[60px] object-contain"
+                className="w-[45px] sm:w-[50px] md:w-[55px] lg:w-[60px] object-contain"
               />
             </motion.div>
 
             {/* Card 2 */}
             <motion.div
-              className="absolute top-[50px] right-[20px] bg-background border border-white/10 
+              className="absolute top-[35px] sm:top-[40px] md:top-[45px] lg:top-[50px] right-[10px] sm:right-[15px] md:right-[18px] lg:right-[20px] bg-background border border-white/10 
                    rounded-full shadow-lg flex items-center justify-center 
-                   w-[160px] sm:w-[180px] md:w-[150px] h-[60px] sm:h-[50px]"
+                   w-[110px] sm:w-[120px] md:w-[135px] lg:w-[150px] h-[45px] sm:h-[48px] md:h-[50px]"
               style={{ rotate: "12deg" }}
             >
               <img
                 src="./brand logos/Frame 21.png"
                 alt="Bolly Bath"
-                className="w-[80px] object-contain"
+                className="w-[60px] sm:w-[65px] md:w-[72px] lg:w-[80px] object-contain"
               />
             </motion.div>
 
             {/* Card 3 */}
             <motion.div
-              className="absolute top-[100px] right-[120px] bg-background border border-white/10 
+              className="absolute top-[70px] sm:top-[80px] md:top-[90px] lg:top-[100px] right-[80px] sm:right-[95px] md:right-[105px] lg:right-[120px] bg-background border border-white/10 
                    rounded-full shadow-lg flex items-center justify-center 
-                   w-[160px] sm:w-[180px] md:w-[200px] h-[60px] sm:h-[60px]"
+                   w-[120px] sm:w-[140px] md:w-[160px] lg:w-[180px] xl:w-[200px] h-[50px] sm:h-[55px] md:h-[60px]"
               style={{ rotate: "-12deg" }}
             >
               <img
                 src="./brand logos/Frame 21.png"
                 alt="Enfork Creations"
-                className="w-[120px] object-contain"
+                className="w-[90px] sm:w-[100px] md:w-[110px] lg:w-[120px] object-contain"
               />
             </motion.div>
 
             {/* Card 4 */}
             <motion.div
-              className="absolute top-[180px] right-[10px] bg-background border border-white/10 
+              className="absolute top-[130px] sm:top-[145px] md:top-[160px] lg:top-[180px] right-[5px] sm:right-[7px] md:right-[8px] lg:right-[10px] bg-background border border-white/10 
                    rounded-full shadow-lg flex items-center justify-center 
-                   w-[160px] sm:w-[180px] md:w-[200px] h-[60px] sm:h-[60px]"
+                   w-[120px] sm:w-[140px] md:w-[160px] lg:w-[180px] xl:w-[200px] h-[50px] sm:h-[55px] md:h-[60px]"
               style={{ rotate: "15deg" }}
             >
               <img
                 src="./brand logos/Frame 21.png"
                 alt="Bolly Bath"
-                className="w-[120px] object-contain"
+                className="w-[90px] sm:w-[100px] md:w-[110px] lg:w-[120px] object-contain"
               />
             </motion.div>
 
             {/* Card 5 */}
             <motion.div
-              className="absolute top-[260px] right-[-40px] bg-background border border-white/10 
+              className="absolute top-[185px] sm:top-[210px] md:top-[235px] lg:top-[260px] right-[-25px] sm:right-[-30px] md:right-[-35px] lg:right-[-40px] bg-background border border-white/10 
                    rounded-full shadow-lg flex items-center justify-center 
-                   w-[160px] sm:w-[180px] md:w-[200px] h-[60px] sm:h-[60px]"
+                   w-[120px] sm:w-[140px] md:w-[160px] lg:w-[180px] xl:w-[200px] h-[50px] sm:h-[55px] md:h-[60px]"
             >
               <img
                 src="./brand logos/Frame 22.png"
                 alt="Enfork Creations"
-                className="w-[80px] object-contain"
+                className="w-[60px] sm:w-[65px] md:w-[72px] lg:w-[80px] object-contain"
               />
             </motion.div>
 
-            {/* Card-6 */}
+            {/* Card 6 */}
             <motion.div
-              className="absolute top-[250px] right-[150px] bg-background border border-white/10 
+              className="absolute top-[175px] sm:top-[200px] md:top-[225px] lg:top-[250px] right-[100px] sm:right-[115px] md:right-[130px] lg:right-[150px] bg-background border border-white/10 
                    rounded-full shadow-lg flex items-center justify-center 
-                   w-[160px] sm:w-[180px] md:w-[200px] h-[60px] sm:h-[60px]"
+                   w-[120px] sm:w-[140px] md:w-[160px] lg:w-[180px] xl:w-[200px] h-[50px] sm:h-[55px] md:h-[60px]"
               style={{ rotate: "-16deg" }}
             >
               <img
                 src="./brand logos/Frame 21.png"
                 alt="Bolly Bath"
-                className="w-[120px] object-contain"
+                className="w-[90px] sm:w-[100px] md:w-[110px] lg:w-[120px] object-contain"
               />
             </motion.div>
-            {/* card 7 */}
+
+            {/* Card 7 */}
             <motion.div
-              className="absolute top-[180px] left-[240px] bg-background border border-white/10 
+              className="absolute top-[130px] sm:top-[145px] md:top-[160px] lg:top-[180px] left-[160px] sm:left-[185px] md:left-[150px] lg:left-[150px] bg-background border border-white/10 
                    rounded-full shadow-lg flex items-center justify-center 
-                   w-[160px] sm:w-[180px] md:w-[150px] h-[60px] sm:h-[60px]"
+                   w-[110px] sm:w-[120px] md:w-[135px] lg:w-[150px] h-[50px] sm:h-[55px] md:h-[60px]"
               style={{ rotate: "5deg" }}
             >
               <img
                 src="./brand logos/Frame 22.png"
                 alt="Enfork Creations"
-                className="w-[70px] object-contain"
+                className="w-[50px] sm:w-[55px] md:w-[62px] lg:w-[70px] object-contain"
               />
             </motion.div>
           </div>

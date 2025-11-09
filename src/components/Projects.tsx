@@ -33,19 +33,19 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className=" py-20 text-white">
+    <section id="projects" className="py-12 sm:py-16 lg:py-20 text-white">
       <div className="section-container">
         {/* ===== Header ===== */}
-        <div className="flex flex-col md:flex-row items-start md:items-end gap-8 mb-12">
+        <div className="flex flex-col md:flex-row items-start md:items-end gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-10 lg:mb-12">
           <h2 className="text-h2 font-light tracking-tight">Our Projects</h2>
-          <p className="text-foreground -mt-12 md:mt-0 max-w-xs leading-relaxed text-p2">
-            Read how we’ve helped some of the biggest brands transform their
+          <p className="text-foreground md:mt-0 max-w-xs leading-relaxed text-p">
+            Read how we've helped some of the biggest brands transform their
             business
           </p>
         </div>
 
         {/* ===== Projects Grid ===== */}
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
           {projects.map((project) => (
             <motion.div
               key={project.id}
@@ -59,32 +59,23 @@ const Projects = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-[300px] object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-[240px] sm:h-[280px] lg:h-[300px] object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105"
                 />
 
-                {/* Overlay */}
-                <div className="absolute inset-0 rounded-2xl flex items-center justify-center">
-                  <img
-                    src={project.logo}
-                    alt={`${project.title} Logo`}
-                    className="h-10 md:h-12 object-contain"
-                  />
-                </div>
-
                 {/* Arrow Button */}
-                <button className="absolute bottom-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 backdrop-blur-md">
-                  <ArrowUpRight className="w-5 h-5 text-white" />
+                <button className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 backdrop-blur-md">
+                  <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </button>
               </div>
 
               {/* Project Details */}
-              <div className="mt-5">
+              <div className="mt-4 sm:mt-5">
                 {/* Category Tags */}
                 <div className="flex flex-wrap gap-2 mb-3">
                   {project.category.map((tag, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 text-xs rounded-full bg-white/10 text-gray-300 border border-white/10"
+                      className="px-2.5 sm:px-3 py-1 text-xs rounded-full bg-white/10 text-gray-300 border border-white/10"
                     >
                       {tag}
                     </span>
@@ -92,19 +83,21 @@ const Projects = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-h3  mb-2">{project.title}</h3>
+                <h3 className="text-h3 mb-2">{project.title}</h3>
 
                 {/* Description */}
-                <p className="text-sm leading-relaxed mb-4 max-w-lg">
+                <p className="text-xs sm:text-sm leading-relaxed mb-4 max-w-lg">
                   {project.description}
                 </p>
 
                 {/* Stats */}
-                <div className="flex items-center justify-between ">
-                  <div className="flex items-center gap-6">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center sm:justify-between gap-4 sm:gap-0">
+                  <div className="flex items-center gap-4 sm:gap-6">
                     {project.metrics.map((metric, i) => (
                       <div key={i}>
-                        <p className="text-lg font-semibold">{metric.value}</p>
+                        <p className="text-base sm:text-lg font-semibold">
+                          {metric.value}
+                        </p>
                         <p className="text-gray-400 text-xs uppercase tracking-wide">
                           {metric.label}
                         </p>
@@ -119,7 +112,7 @@ const Projects = () => {
                     <img
                       src="./Enfork icons/arrrow right.png"
                       alt="arrow-right"
-                      className="w-[16px] ml-1"
+                      className="w-[14px] sm:w-[16px] ml-1"
                     />
                   </a>
                 </div>
