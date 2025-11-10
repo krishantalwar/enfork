@@ -44,7 +44,7 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative flex justify-center lg:justify-end mt-8 lg:mt-0"
         >
-          <div className="relative hidden lg:block w-full max-w-[320px] sm:max-w-md md:max-w-lg lg:max-w-2xl h-[300px] sm:h-[350px] md:h-[400px] lg:h-[440px] xl:h-[480px] flex justify-center items-center mx-auto">
+          <div className="relative hidden lg:flex w-full max-w-[320px] sm:max-w-md md:max-w-lg lg:max-w-2xl h-[300px] sm:h-[350px] md:h-[400px] lg:h-[440px] xl:h-[480px] justify-center items-center mx-auto">
             {/* === Floating Brand Cards === */}
 
             {/* Card 1 */}
