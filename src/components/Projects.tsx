@@ -66,7 +66,7 @@ const Projects = () => {
                 {/* Arrow Button */}
                 <Link
                   to="/blogs"
-                  className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 w-9 h-9 sm:w-10 sm:h-10 lg:right-4  xl:right-4 flex items-center justify-center 
+                  className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 w-9 h-9 sm:w-10 sm:h-10 lg:right-4 xl:bottom-2  xl:right-10 flex items-center justify-center 
              rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 backdrop-blur-md"
                 >
                   <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 text-white" />

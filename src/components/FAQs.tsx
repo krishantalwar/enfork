@@ -63,7 +63,7 @@ export const FAQ: React.FC = () => {
   };
 
   return (
-    <section className="w-full bg-black py-12 sm:py-16 md:py-20 lg:py-28">
+    <section className="w-full py-12 sm:py-16 md:py-20 lg:py-28">
       <div className="section-container">
         <div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
@@ -86,7 +86,7 @@ export const FAQ: React.FC = () => {
                 </p>
               </div>
 
-              <AppButton label="Contact us" isBlack={true} />
+              <AppButton label="Contact us" isBlack={true} icon={true} />
             </div>
 
             {/* Right Column - FAQ Items */}
@@ -127,13 +127,24 @@ export const FAQ: React.FC = () => {
           </div>
         </div>
 
-        {/* ====== CTA Card ====== */}
-        <div
-          style={{ backgroundImage: "url('./talk oppurnity bg.png')" }}
-          className="relative shadow-2xl bg-center  rounded-2xl flex flex-col-reverse md:flex-row items-center justify-between px-6 sm:px-8 md:px-16 py-8 md:py-0 min-h-[400px] sm:min-h-[300px] md:h-[300px] mt-32 sm:mt-40 md:mt-48 lg:mt-64 "
-        >
-          {/* Backgroudn images */}
-          <div className="absolute -top-64 -lg:top-64 -left-10 -lg:left-32 w-[150px] lg:w-[350px]">
+        <div className="mt-24 sm:mt-0">
+          {/* ====== CTA Card ====== */}
+          <div className=" sm:hidden w-full md:w-1/3 flex justify-center md:mt-0 h-[250px] sm:h-[220px]  md:h-[300px] lg:h-[20] z-[5]">
+            <motion.img
+              src="/CTA image.png"
+              alt="Man making call gesture"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className=" "
+            />
+          </div>
+          <div
+            style={{ backgroundImage: "url('./talk oppurnity bg.png')" }}
+            className="relative shadow-2xl bg-center  rounded-2xl flex flex-col-reverse md:flex-row items-center justify-between px-6 sm:px-8 md:px-16 py-8 md:py-0  sm:min-h-[300px] md:h-[300px]  sm:mt-40 md:mt-48 lg:mt-64 "
+          >
+            {/* Backgroudn images */}
+             <div className=" absolute -top-64 -lg:top-64 -left-10 -lg:left-32 w-[150px] lg:w-[350px]">
             <motion.img
               src="./Enfork page bg elemts/FAQ bg ui.png"
               alt="background-images"
@@ -147,8 +158,8 @@ export const FAQ: React.FC = () => {
                 repeat: Infinity,
               }}
             />
-          </div>
-          <div className="absolute -bottom-24 lg:top-40 -right-20 lg:-right-40 w-[150px] lg:w-[350px]">
+          </div> 
+            <div className="absolute -bottom-24 lg:top-40 -right-20 lg:-right-40 w-[150px] lg:w-[350px]">
             <motion.img
               src="./Enfork page bg elemts/bg object 9.png"
               alt="background-images"
@@ -163,31 +174,33 @@ export const FAQ: React.FC = () => {
               }}
             />
           </div>
-          {/* ===== Left Content ===== */}
-          <div className=" relative z-10 w-full md:w-2/3 space-y-3 sm:space-y-4 lg:space-y-5 text-foreground">
-            <h3 className="text-h3">We're ready to talk opportunities</h3>
-            <p className="text-xs sm:text-sm md:text-base max-w-[400px] leading-relaxed">
-              Book a free consultation and discover how our brands can help you
-              grow, innovate, and succeed. No obligations, just expert guidance.
-            </p>
+            {/* ===== Left Content ===== */}
+            <div className=" relative z-10 w-full md:w-2/3 space-y-3 sm:space-y-4 lg:space-y-5 text-foreground">
+              <h3 className="text-h3">We're ready to talk opportunities</h3>
+              <p className="text-xs sm:text-sm md:text-base max-w-[400px] leading-relaxed">
+                Book a free consultation and discover how our brands can help
+                you grow, innovate, and succeed. No obligations, just expert
+                guidance.
+              </p>
 
-            <AppButton
-              label="Get a Free Strategy Call"
-              isBlack={true}
-              icon={true}
-            />
-          </div>
+              <AppButton
+                label="Get a Free Strategy Call"
+                isBlack={true}
+                icon={true}
+              />
+            </div>
 
-          {/* ===== Right Side: Man Image ===== */}
-          <div className="relative w-full md:w-1/3 flex justify-center md:justify-end -mt-16 md:mt-0 h-[180px] sm:h-[220px]  md:h-[300px] lg:h-[20] z-[5]">
-            <motion.img
-              src="/CTA image.png"
-              alt="Man making call gesture"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="absolute object-cover bottom-0 right-0 w-[180px] sm:w-[220px] md:w-[300px] lg:w-[400px] h-auto z-20 drop-shadow-2xl  "
-            />
+            {/* ===== Right Side: Man Image ===== */}
+            <div className="hidden md:block relative w-full md:w-1/3 flex justify-center md:justify-end -mt-16 md:mt-0 h-[180px] sm:h-[220px]  md:h-[300px] lg:h-[20] z-[5]">
+              <motion.img
+                src="/CTA image.png"
+                alt="Man making call gesture"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="absolute object-cover bottom-0 right-0 w-[180px] sm:w-[220px] md:w-[300px] lg:w-[400px] h-auto z-20 drop-shadow-2xl  "
+              />
+            </div>
           </div>
         </div>
       </div>

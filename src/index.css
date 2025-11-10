@@ -240,6 +240,21 @@ Fonts follow the brand typography hierarchy.
     font-weight: 600;
     letter-spacing: -0.01em;
   }
+
+  .industry-card-height{
+    height: 10000px;
+  }
+  .responsive-box {
+  padding: 32px; /* default for below 1024px */
+  border-radius: 32px;
+}
+
+/* When screen width ≥ 1024px */
+@media (min-width: 1024px) {
+  .responsive-box {
+    padding: 64px;
+  }
+}
 }
 
 /* ====================================

@@ -14,17 +14,24 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-black">
       <Header />
-      <Hero />
-      <About />
+      <div
+        style={{ backgroundImage: "url('./ha bg.png')" }}
+        className="relative py-4 sm:py-14 lg:py-16 bg-black overflow-hidden bg-cover bg-center bg-no-repeat"
+      >
+        <Hero />
+        <About />
+      </div>
       <CoreIndustries />
       <OurVentures />
       <Testimonials />
-      <FAQs />
-      <Projects />
+      <div
+        style={{ backgroundImage: "url('./faq bg.png')" }}
+        className="relative -mt-24 sm:0 overflow-hidden bg-cover bg-bottom bg-no-repeat"
+      >
+        <FAQs />
+        <Projects />
+      </div>
       <Footer />
-
-   
-
     </div>
   );
 };

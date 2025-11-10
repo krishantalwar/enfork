@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import AppButton from "@/components/common/AppButton";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -108,7 +109,9 @@ const Header = () => {
               ))}
 
               <div className="pt-4">
-                <AppButton label="Contact us" isBlack={true} icon={true} />
+                <Link to="/about-us">
+                  <AppButton label="Contact us" isBlack={true} icon={true} />
+                </Link>
               </div>
             </div>
           </motion.div>

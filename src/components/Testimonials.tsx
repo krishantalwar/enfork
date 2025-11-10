@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
-
+import TestimonialSlider from "../components/common/TestimonialSlider";
 const testimonials = [
   {
     title: "Problem Solvers",
@@ -61,7 +61,7 @@ const Testimonials = () => {
         />
       </div>
 
-      <div className="relative px-4 md:px-6 lg:px-0">
+      <div className="relative  md:px-6 lg:px-0">
         <div>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -80,9 +80,9 @@ const Testimonials = () => {
             style={{
               backgroundImage: "url('./testtimonial bg.png')",
             }}
-            className="py-8 md:py-10 lg:py-12 bg-cover bg-left-top bg-no-repeat mt-4 md:mt-6 lg:mt-4"
+            className="py-8  md:py-10 lg:py-12 bg-cover bg-left-top bg-no-repeat mt-4 md:mt-6 lg:mt-4"
           >
-            <div className="section-container">
+            <div className="section-container w-full ">
               {/* ====== Customer Count ====== */}
               <div className="flex flex-col sm:flex-row justify-center items-center gap-3 md:gap-4 mt-6 md:mt-8 lg:mt-10">
                 <p className="text-base md:text-lg font-medium text-gray-300">
@@ -112,42 +112,9 @@ const Testimonials = () => {
                   </div>
                 </div>
               </div>
-              <div className="relative flex justify-center overflow-hidden mt-6 md:mt-8">
-                {/* ====== Testimonials Carousel ====== */}
-
+              <div className="relative flex justify-center overflow-hidden w-[100%] md:[60%] lg:w-[700px] mx-auto cl:p-12 ">
                 {/* Main Card */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  className="relative bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 w-full md:w-[600px] text-left shadow-xl lg:p-12"
-                >
-                  <Quote className="absolute top-4 right-4 md:top-6 md:right-6 w-6 h-6 md:w-8 md:h-8 text-white/10" />
-
-                  <h6 className=" font-semibold mb-2">Problem Solvers</h6>
-                  <p className="2xl:text-w-[24px] leading-relaxed mb-4">
-                    With having a fleet business you need to have consistent
-                    leads and thanks to Pav and team for getting this sorted.
-                    Empty garage looks perfect!!
-                  </p>
-
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0">
-                    <div className="flex items-center gap-1 text-yellow-400">
-                      <span className="text-white font-semibold text-sm md:text-base">
-                        4.0
-                      </span>
-                      {[...Array(4)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className="w-3.5 h-3.5 md:w-4 md:h-4 fill-yellow-400"
-                        />
-                      ))}
-                    </div>
-                    <p className="text-gray-400 text-xs md:text-sm italic">
-                      – Omega Auto Rentals
-                    </p>
-                  </div>
-                </motion.div>
+                <TestimonialSlider />
               </div>
             </div>
           </div>
