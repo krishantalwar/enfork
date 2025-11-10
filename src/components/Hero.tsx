@@ -7,8 +7,8 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-[100vh] overflow-hidden   lg:pt-12 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('./Hero background.png')" }}
+      // className="relative min-h-[100vh] overflow-hidden   lg:pt-12 bg-cover bg-center bg-no-repeat"
+      // style={{ backgroundImage: "url('./Hero background.png')" }}
     >
       <div className="section-container mt-24 xl:mt-32">
         {/* ===== Content Wrapper (Equal Padding) ===== */}
@@ -45,7 +45,6 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
               className=" absolute w-[150%] md:w-[100%] -top-12 xl:w-[200%]  lg:-right-[70%] lg:-top-[300px]"
-              
             >
               <img
                 src="./hero section images/stack images.png"
@@ -90,7 +89,7 @@ const Hero = () => {
 
           {/* ===== Stats Section (Visible only below video on small & tablet) ===== */}
           <div className="block lg:hidden my-12 to-transparent text-white px-5 sm:px-8 py-6 mt-2 rounded-xl sm:rounded-2xl shadow-inner border border-white/10">
-            <div className="grid grid-cols-2 gap-y-6 gap-x-4 text-center">
+            <div className="grid grid-cols-2 gap-y-6 gap-x-4 text-center ">
               {/* Stat 1 */}
               <div>
                 <p className="text-[11px] sm:text-xs text-gray-300 font-medium leading-tight">

@@ -21,8 +21,11 @@ const OurVentures = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap- 8">
             {/* ===== Left Content Card ===== */}
             <div
-              style={{ backgroundImage: "url('./ventures/bg 2.png')" }}
-              className="relative lg:col-span-2 bg-[#0e0e0e]/90 rounded-2xl p-6 md:p-8 lg:p-12 border border-white/50 text-white shadow-lg backdrop-blur-sm py-12 md:py-16 bg-center bg-no-repeat"
+              style={{
+                backgroundImage: "url('./ventures/bg 2.png')",
+               
+              }}
+              className="relative   lg:col-span-2 bg-[#0e0e0e]/90 rounded-2xl p-6 md:p-8 lg:p-12 border border-white/50 text-white shadow-lg backdrop-blur-sm py-12 md:py-16 bg-center bg-no-repeat lg:bg-[length:110%]"
             >
               {/* Background Pattern Overlay */}
               <div
@@ -106,8 +109,11 @@ const OurVentures = () => {
 
             {/* ===== Right Content Card ===== */}
             <div
-              style={{ backgroundImage: "url('./ventures/bg 1.png')" }}
-              className="relative lg:col-span-2 rounded-2xl p-6 md:p-8 lg:p-12 border border-white/50 text-foreground shadow-lg backdrop-blur-sm py-12 md:py-16 bg-center lg:order-2 order-1"
+              style={{
+                backgroundImage: "url('./ventures/bg 1.png')",
+         
+              }}
+              className="relative lg:col-span-2 rounded-2xl p-6 md:p-8 lg:p-12 border border-white/50 text-foreground shadow-lg backdrop-blur-sm py-12 md:py-16 bg-center lg:order-2 order-1 lg:bg-[length:110%]"
             >
               <div
                 className="absolute inset-0 opacity-10 bg-[url('/brand-icons-bg.png')] bg-cover bg-center rounded-2xl"

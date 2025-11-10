@@ -18,7 +18,7 @@ const IndustryCard = ({ industry, index }) => {
       className="flex flex-col justify-between group relative"
     >
       <motion.div
-        className="relative w-full h-full "
+        className="relative w-full"
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
         style={{
@@ -27,19 +27,15 @@ const IndustryCard = ({ industry, index }) => {
       >
         {/* Frontsdie */}
         <div
-          className="backface-hidden   bg-[linear-gradient(180deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.02)_100%)] 
-                         p-6 md:p-4
-                           backdrop-blur-[12px] shadow-[0_4px_30px_rgba(0,0,0,0.3)]
-                           hover:border-white/50 hover:shadow-[0_8px_40px_rgba(0,0,0,0.4)]
-                           transition-all duration-300 h-[600px] rounded-2xl"
+          className="backface-hidden    p-6 md:p-4 rounded-2xl industry-card-height "
           onMouseEnter={() => setHasBg(false)}
           onMouseLeave={() => setHasBg(true)}
           style={{
             backfaceVisibility: "hidden",
-            background: hasBg
+            backgroundSize: "110%",
+             background: hasBg
               ? "url('./Core industries section/card bg.png') center"
               : "#1b1b1b", // plain background on hover
-            transition: "all 0.6s ease-in-out",
           }}
         >
           {/* Card Header */}
@@ -58,12 +54,12 @@ const IndustryCard = ({ industry, index }) => {
 
           <div>
             {/* Description */}
-            <p className="text-foreground font-light leading-relaxed mb-6">
+            <p className="text-foreground font-light leading-relaxed mb-6 mt-24">
               {industry.description}
             </p>
 
             {/* Image */}
-            <div className="relative w-full h-[200px] rounded-xl overflow-hidden">
+            <div className="relative w-full h-[200px]   rounded-xl overflow-hidden">
               <img
                 src={industry.image}
                 alt={industry.title}

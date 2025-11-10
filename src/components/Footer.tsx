@@ -7,7 +7,7 @@ const Footer = () => {
       style={{ backgroundImage: "url('./footer background.png')" }}
     >
       <div className="section-container">
-        <div className="py-8 md:py-12 lg:py-16 flex flex-col lg:flex-row justify-between gap-8 lg:gap-0">
+        <div className="py-24 md:py-12 lg:py-16 flex flex-col lg:flex-row justify-between gap-8 lg:gap-0">
           {/* ====== Left Column: Brand & Subscribe ====== */}
           <div className="w-full lg:w-auto">
             <img
