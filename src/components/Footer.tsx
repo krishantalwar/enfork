@@ -10,7 +10,11 @@ const Footer = () => {
         <div className="py-8 md:py-12 lg:py-16 flex flex-col lg:flex-row justify-between gap-8 lg:gap-0">
           {/* ====== Left Column: Brand & Subscribe ====== */}
           <div className="w-full lg:w-auto">
-            <img src="./logo bg 3.png" alt="logo" className="w-[140px] sm:w-[170px] lg:w-[200px]" />
+            <img
+              src="./logo bg 3.png"
+              alt="logo"
+              className="w-[140px] sm:w-[170px] lg:w-[200px]"
+            />
 
             <h6 className="text-foreground w-full max-w-[280px] sm:max-w-xs lg:w-80 mt-6 lg:mt-10 leading-tight">
               Get the latest inspiration & insights
@@ -21,12 +25,16 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter Your Email For latest updates"
-                className="flex-1 px-3 sm:px-5 py-2 text-p font-light text-gray-600 placeholder-gray-400 bg-transparent outline-none"
+                className="flex-1 px-3 sm:px-5 py-2 
+        text-[0.875rem] sm:text-[1rem] lg:text-[1.125rem]
+ font-light text-gray-600 placeholder-gray-400 bg-transparent outline-none w-1/2"
               />
 
               {/* Subscribe Button */}
               <button
-                className="px-4 sm:px-6 py-2  bg-[#757575] text-white font-semibold text-p rounded-full 
+                className="px-4 sm:px-6 py-2  bg-[#757575] text-white font-semibold 
+        text-[0.875rem] sm:text-[1rem] lg:text-[1.125rem]
+ rounded-full 
                hover:bg-[#666666] transition-all duration-300 whitespace-nowrap"
               >
                 Subscribe

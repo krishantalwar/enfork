@@ -39,12 +39,12 @@ const Hero = () => {
           </motion.div>
 
           {/* ===== Right Image Composition ===== */}
-          <div className="relative flex justify-center mt-6 sm:mt-8 lg:mt-12   h-32 lg:h-auto ">
+          <div className="relative flex justify-center mt-6 sm:mt-8 lg:mt-12   h-32 md:h-80 lg:h-auto ">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className=" absolute w-[150%] -top-12 xl:w-[200%]  lg:-right-[70%] lg:-top-[300px]"
+              className=" absolute w-[150%] md:w-[100%] -top-12 xl:w-[200%]  lg:-right-[70%] lg:-top-[300px]"
               
             >
               <img
