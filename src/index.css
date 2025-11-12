@@ -393,3 +393,7 @@ Fonts follow the brand typography hierarchy.
   width: 18px;
   border-radius: 6px;
 }
+
+.link-css{
+    clip-path: path("M0 0 Q0,30 30,30 L 0 30 Z");
+}
