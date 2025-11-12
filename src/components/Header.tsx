@@ -70,7 +70,9 @@ const Header = () => {
 
         {/* === Desktop Button (Only on lg+) === */}
         <div className="hidden lg:flex items-center gap-3">
-          <AppButton label="Contact us" isBlack={true} icon={true} />
+          <Link to="contact-us">
+            <AppButton label="Contact us" isBlack={true} icon={true} />
+          </Link>
         </div>
 
         {/* === Mobile/Tablet Menu Button === */}
@@ -109,7 +111,7 @@ const Header = () => {
               ))}
 
               <div className="pt-4">
-                <Link to="/about-us">
+                <Link to="/contact-us">
                   <AppButton label="Contact us" isBlack={true} icon={true} />
                 </Link>
               </div>
