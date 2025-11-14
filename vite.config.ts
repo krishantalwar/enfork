@@ -8,6 +8,7 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    historyApiFallback: true, // <--- Added for React Router direct URL support
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
