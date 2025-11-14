@@ -4,12 +4,10 @@ const About = () => {
   return (
     <section
       id="about"
-      // style={{ backgroundImage: "url('./About bg gradient.png')" }}
-      className="relative py-12 sm:py-14 lg:py-16 overflow-hidden "
+ 
+      className="relative py-12 sm:py-14 lg:py-16 overflow-hidden bg-cover bg-center bg-no-repeat"
     >
-      <div 
-      
-      className="section-container grid grid-cols-1 lg:grid-cols-2 items-center gap-8 sm:gap-12 lg:gap-16">
+      <div className="section-container grid grid-cols-1 lg:grid-cols-2 items-center gap-8 sm:gap-12 lg:gap-16">
         {/* ===== Left Content ===== */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}

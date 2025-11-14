@@ -59,7 +59,7 @@ const Footer = () => {
               <ul className="space-y-2 text-foreground text-p3 my-4">
                 <li>
                   <a
-                    href="#"
+                    href="/"
                     className="hover:text-white transition-all font-light"
                   >
                     Home
@@ -67,7 +67,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="about-us"
                     className="hover:text-white transition-all font-light"
                   >
                     About Us
@@ -75,7 +75,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="ventures"
                     className="hover:text-white transition-all font-light"
                   >
                     Our Brands
@@ -83,7 +83,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="contact-us"
                     className="hover:text-white transition-all font-light"
                   >
                     Contact Us
@@ -124,7 +124,7 @@ const Footer = () => {
                     src="./footer icons/Group 1000004278.svg"
                     alt="phone"
                   />
-                  <span>+61 460777779</span>
+                  <a href="tel:+1800363675">+1800363675</a>
                 </div>
               </div>
             </div>

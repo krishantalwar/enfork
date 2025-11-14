@@ -26,10 +26,10 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { id: "home", label: "Home", href: "#home" },
-    { id: "about", label: "About us", href: "#about" },
-    { id: "services", label: "Services", href: "#services" },
-    { id: "projects", label: "Projects", href: "#projects" },
+    { id: "home", label: "Home", href: "/" },
+    { id: "about", label: "About us", href: "/about-us" },
+    { id: "ventures", label: "Ventures", href: "/ventures" },
+    { id: "contact-us", label: "Contact Us", href: "/contact-us" },
   ];
 
   return (
@@ -40,8 +40,8 @@ const Header = () => {
       className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-lg border-b border-white/10"
     >
       <div className="section-container flex items-center justify-between py-3 sm:py-4 md:py-5 lg:py-6 relative">
-        {/* === Logo === */}
-        <a href="#" className="flex items-center gap-2 select-none z-50">
+        {/* Logo */}
+        <a href="/" className="flex items-center gap-2 select-none z-50">
           <img
             src="./logo bg 3.png"
             alt="Enfork"
@@ -49,8 +49,8 @@ const Header = () => {
           />
         </a>
 
-        {/* === Desktop Navigation (Only on lg+) === */}
-        <nav className="hidden lg:flex absolute inset-x-0 top-1/2 -translate-y-1/2 items-center justify-center">
+        {/* Desktop Navigation */}
+        <nav className="hidden lg:flex absolute inset-x-0 top-1/2 -translate-y-1/2 items-center justify-center z-10">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-1 py-1 backdrop-blur-sm">
             {navLinks.map((link) => (
               <a
@@ -68,14 +68,14 @@ const Header = () => {
           </div>
         </nav>
 
-        {/* === Desktop Button (Only on lg+) === */}
-        <div className="hidden lg:flex items-center gap-3">
-          <Link to="contact-us">
-            <AppButton label="Contact us" isBlack={true} icon={true} />
+        {/* Desktop Button */}
+        <div className="hidden lg:flex items-center gap-3 z-50">
+          <Link to="tel:+1800363675">
+            <AppButton label="+1800363675" isBlack={true} />
           </Link>
         </div>
 
-        {/* === Mobile/Tablet Menu Button === */}
+        {/* Mobile Menu Toggle */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="lg:hidden text-white z-50"
@@ -84,7 +84,7 @@ const Header = () => {
         </button>
       </div>
 
-      {/* === Mobile/Tablet Menu Overlay (Visible up to lg) === */}
+      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -111,8 +111,8 @@ const Header = () => {
               ))}
 
               <div className="pt-4">
-                <Link to="/contact-us">
-                  <AppButton label="Contact us" isBlack={true} icon={true} />
+                <Link to="tel:+1800363675">
+                  <AppButton label="+1800363675" isBlack={true} />
                 </Link>
               </div>
             </div>

@@ -1,151 +1,139 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { Send } from "lucide-react";
+import { Link } from "react-router-dom";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
+import { Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import AppButton from "@/components/common/AppButton";
 
-const ContactUs = () => {
-  const [formData, setFormData] = React.useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    setFormData({ name: "", email: "", message: "" });
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
+const Contact = () => {
   return (
-    <section
-      id="contact"
+    <div
+      className="min-h-screen pt-24 sm:pt-28 lg:pt-32"
       style={{
         backgroundImage: "url('./Hero background.png')",
       }}
-      className="relative py-16 sm:py-20 lg:py-28 overflow-hidden bg-cover bg-center bg-no-repeat"
     >
-      <div className="section-container relative z-10">
-        {/* ===== Section Title ===== */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-10 md:mb-16"
+      {/* Hero Section with Background Image */}
+      <div className="relative h-screen overflow-hidden section-container rounded-3xl">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80')",
+          }}
         >
-          <h2 className="text-h3 sm:text-h2 font-light text-white mb-3">
-            Let’s Build Something Great
-          </h2>
-          <p className="text-sm sm:text-base text-gray-300 max-w-xl mx-auto">
-            Have an idea or project in mind? Fill out the form below and our
-            team will reach out soon.
-          </p>
-        </motion.div>
+          <div className="absolute inset-0 bg-black/40" />
+        </div>
 
-        {/* ===== Form Container ===== */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-2xl mx-auto"
-        >
-          <div className="relative bg-gradient-to-br from-white/5 via-white/10 to-transparent border border-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 lg:p-12 shadow-[0_0_25px_rgba(255,255,255,0.05)]">
-            {/* Pattern Overlay */}
-            <div
-              className="absolute inset-0 bg-[url('/brand-icons-bg.png')] bg-cover bg-center opacity-[0.07] rounded-2xl pointer-events-none"
-              aria-hidden="true"
-            ></div>
+        {/* Gradient Overlay at Bottom */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-pink-200/30 via-purple-200/20 to-transparent" />
 
-            {/* ===== Form ===== */}
-            <form onSubmit={handleSubmit} className="relative z-10 space-y-6">
-              {/* Name */}
-              <div className="space-y-2">
-                <Label
-                  htmlFor="name"
-                  className="text-white/80 text-sm font-medium"
-                >
-                  Name
-                </Label>
-                <Input
-                  id="name"
-                  name="name"
-                  type="text"
-                  placeholder="Your full name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="bg-white/5 border-white/10 text-white placeholder:text-gray-400 focus-visible:ring-white/20"
-                />
-              </div>
+        {/* Content */}
+        <div className="relative h-full flex flex-col justify-between p-6 md:p-12">
+          {/* Breadcrumb */}
+          <Breadcrumb>
+            <BreadcrumbList className="bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20 inline-flex">
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link
+                    to="/"
+                    className="text-white hover:text-white/80 transition-colors"
+                  >
+                    Home
+                  </Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator className="text-white/60" />
+              <BreadcrumbItem>
+                <BreadcrumbPage className="text-white">Contact</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
 
-              {/* Email */}
-              <div className="space-y-2">
-                <Label
-                  htmlFor="email"
-                  className="text-white/80 text-sm font-medium"
-                >
-                  Email
-                </Label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="your@email.com"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="bg-white/5 border-white/10 text-white placeholder:text-gray-400 focus-visible:ring-white/20"
-                />
-              </div>
-
-              {/* Message */}
-              <div className="space-y-2">
-                <Label
-                  htmlFor="message"
-                  className="text-white/80 text-sm font-medium"
-                >
-                  Message
-                </Label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  placeholder="Tell us about your project or idea..."
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={5}
-                  className="bg-white/5 border-white/10 text-white placeholder:text-gray-400 focus-visible:ring-white/20 resize-none"
-                />
-              </div>
-
-              {/* Submit Button */}
-              <div className="pt-4 flex justify-center">
-                <AppButton
-                  label="Send Message"
-                  icon={<Send className="w-4 h-4" />}
-                  isBlack={false}
-                />
-              </div>
-            </form>
-          </div>
-        </motion.div>
+          {/* Title */}
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white">
+            Contact
+          </h1>
+        </div>
       </div>
 
-      {/* Subtle Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent z-0"></div>
-    </section>
+      {/* Form Section */}
+      <div className=" py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          {/* Get in touch button and Heading Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 items-start">
+            {/* Get in touch button - 1 part */}
+            <div className="flex justify-start">
+              <button className="px-6 py-2 rounded-full border border-white/20 text-white hover:border-white/40 hover:bg-white/10 transition-colors animate-pulse">
+                ✦ Get in touch
+              </button>
+            </div>
+
+            {/* Heading - 2 parts */}
+            <div className="md:col-span-2">
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white">
+                We're ready to
+                <br />
+                help you!
+              </h2>
+            </div>
+          </div>
+
+          {/* Form */}
+          <form className="max-w-4xl mx-auto space-y-6">
+            {/* Name Fields */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Input
+                type="text"
+                placeholder="First Name"
+                className="h-14 rounded-2xl bg-white/10 border border-white/20 text-white placeholder:text-gray-400 focus:border-white/40 focus:bg-white/15 transition-colors"
+              />
+              <Input
+                type="text"
+                placeholder="Last Name"
+                className="h-14 rounded-2xl bg-white/10 border border-white/20 text-white placeholder:text-gray-400 focus:border-white/40 focus:bg-white/15 transition-colors"
+              />
+            </div>
+
+            {/* Email Field */}
+            <div className="relative">
+              <Input
+                type="email"
+                placeholder="Your Email"
+                className="h-14 rounded-2xl bg-white/10 border border-white/20 text-white placeholder:text-gray-400 focus:border-white/40 focus:bg-white/15 transition-colors pr-12"
+              />
+              <Mail className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/60" />
+            </div>
+
+            {/* Message Field */}
+            <Textarea
+              placeholder="Your Message"
+              rows={8}
+              className="rounded-2xl bg-white/10 border border-white/20 text-white placeholder:text-gray-400 focus:border-white/40 focus:bg-white/15 transition-colors resize-none"
+            />
+
+            {/* Submit Button */}
+            <Button
+              type="submit"
+              size="lg"
+              className="w-full h-14 rounded-full text-lg font-semibold bg-black text-white border border-white hover:bg-black/80 hover:border-white transition-colors"
+            >
+              Send
+            </Button>
+          </form>
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default ContactUs;
+export default Contact;
