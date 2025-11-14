@@ -61,7 +61,7 @@ const blogPosts = [
 
 const Blog = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pt-24 sm:pt-28 lg:pt-32">
       <main className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
         {/* Hero Section */}
         <motion.div

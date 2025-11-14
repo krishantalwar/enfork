@@ -1,6 +1,4 @@
-import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Stats from "@/components/Stats";
 import About from "@/components/About";
 import CoreIndustries from "@/components/CoreIndustries";
 import OurBrands from "@/components/OurVentures";
@@ -13,10 +11,9 @@ import OurVentures from "@/components/OurVentures";
 const Index = () => {
   return (
     <div className="min-h-screen bg-black">
-      <Header />
       <div
         style={{ backgroundImage: "url('./ha bg.png')" }}
-        className="relative py-4 sm:py-14 lg:py-16 bg-black overflow-hidden bg-cover bg-center bg-no-repeat"
+        className="relative pt-24 sm:pt-28 lg:pt-32 py-4 sm:py-14 lg:py-16  overflow-hidden bg-cover bg-center bg-no-repeat"
       >
         <Hero />
         <About />

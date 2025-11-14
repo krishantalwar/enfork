@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 import {
@@ -11,10 +10,12 @@ import {
   BreadcrumbPage,
 } from "@/components/ui/breadcrumb";
 
-const About = () => {
+import { motion } from "framer-motion";
+
+const Ventures = () => {
   return (
     <section
-      id="about"
+      id="ventures"
       style={{
         backgroundImage: "url('./Hero background.png')",
       }}
@@ -23,7 +24,7 @@ const About = () => {
       <div className="section-container relative z-10">
 
         {/* ===== Breadcrumb ===== */}
-        <div className="mb-8 md:mb-12">
+        <div className="mb-8 md:mb-12 flex justify-start">
           <Breadcrumb>
             <BreadcrumbList className="bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20 inline-flex">
               <BreadcrumbItem>
@@ -41,23 +42,26 @@ const About = () => {
 
               <BreadcrumbItem>
                 <BreadcrumbPage className="text-white">
-                  About
+                  Ventures
                 </BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
         </div>
 
-        {/* ===== Section Title ===== */}
+        {/* ===== Page Title ===== */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-10 md:mb-16"
         >
-          <h2 className="text-h3 sm:text-h2 font-light text-white mb-3">
-            Let’s know about us
-          </h2>
+          <h1 className="text-h3 sm:text-h2 lg:text-h1 font-light text-white">
+            Our Ventures
+          </h1>
+          <p className="text-gray-300 mt-4 max-w-2xl mx-auto text-base md:text-lg">
+            Explore our current business verticals and growth initiatives.
+          </p>
         </motion.div>
 
       </div>
@@ -65,4 +69,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Ventures;

@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, X } from "lucide-react";
 import IndustryCard from "../components/common/IndustryCard";
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 const industries = [
   {
     title: "Media & Entertainment",
@@ -10,7 +11,7 @@ const industries = [
       "Your brand is the story people share about you when you're not in the room.",
     image: "./Core industries section/tile 1.png",
     backContent: {
-      title:"What We Do",
+      title: "What We Do",
       points: [
         "Digital Transformation",
         "AI & Machine Learning",
@@ -57,6 +58,46 @@ const industries = [
       ],
     },
   },
+  {
+    title: (
+      <>
+        NDIS & <br /> Healthcare
+      </>
+    ),
+    description:
+      "Your brand is the story people share about you when you're not in the room.",
+    image: "./Core industries section/tile 3.png",
+    backContent: {
+      title: "Creative Services",
+      points: [
+        "Brand Strategy",
+        "Digital Marketing",
+        "Content Creation",
+        "Social Media",
+        "Campaign Management",
+      ],
+    },
+  },
+  {
+    title: (
+      <>
+        NDIS & <br /> Healthcare
+      </>
+    ),
+    description:
+      "Your brand is the story people share about you when you're not in the room.",
+    image: "./Core industries section/tile 3.png",
+    backContent: {
+      title: "Creative Services",
+      points: [
+        "Brand Strategy",
+        "Digital Marketing",
+        "Content Creation",
+        "Social Media",
+        "Campaign Management",
+      ],
+    },
+  },
 ];
 
 const CoreIndustries = () => {
@@ -79,11 +120,26 @@ const CoreIndustries = () => {
         </motion.div>
 
         {/* ===== Industry Cards Grid ===== */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <Swiper
+        
+          modules={[Pagination, Navigation, Autoplay]}
+          spaceBetween={30}
+          slidesPerView={1}
+          loop={true}
+   
+          navigation={true}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3.5 },
+          }}
+        >
           {industries.map((industry, index) => (
-            <IndustryCard key={index} industry={industry} index={index} />
+            <SwiperSlide key={index}>
+              <IndustryCard industry={industry} index={index} />
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
     </section>
   );
