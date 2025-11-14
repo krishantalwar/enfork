@@ -8,7 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ContactUs from "./pages/ContactUs";
 import About from "./pages/About";
-import Ventures from "./pages/Ventures";
+import Ventures from "./pages/Ventures.js";
 import Blog from "./pages/blogs";
 
 const queryClient = new QueryClient();
