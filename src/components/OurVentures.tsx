@@ -25,7 +25,7 @@ const OurVentures = () => {
                 backgroundImage: "url('./ventures/bg 2.png')",
                
               }}
-              className="relative   lg:col-span-2 bg-[#0e0e0e]/90 rounded-2xl p-6 md:p-8 lg:p-12 border border-white/50 text-white shadow-lg backdrop-blur-sm py-12 md:py-16 bg-center bg-no-repeat lg:bg-[length:110%]"
+              className="relative   lg:col-span-2 bg-[#0e0e0e]/90 rounded-2xl p-6 md:p-8 lg:p-12 border border-white/50 text-white shadow-lg backdrop-blur-sm py-12 md:py-16 bg-center bg-no-repeat xl:bg-[length:110%]"
             >
               {/* Background Pattern Overlay */}
               <div
