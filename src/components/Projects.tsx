@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
-
+import CurveImageButton from "@/components/common/CurveImageButton";
 const projects = [
   {
     id: 1,
@@ -63,15 +63,9 @@ const Projects = () => {
                   className="w-full h-[240px] sm:h-[280px] lg:h-[300px] object-cover rounded-2xl transition-transform duration-500 "
                 />
 
-                {/* Arrow Button */}
-                <Link 
-              
-                  to="/blogs"
-                  className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 w-9 h-9 sm:w-10 sm:h-10 lg:right-4 xl:bottom-6  xl:right-4 2xl:bottom-1 2xl:right-10 flex items-center justify-center 
-             rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 backdrop-blur-md"
-                >
-                  <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-                </Link>
+                <div className=" absolute bottom-0 right-0">
+                  <CurveImageButton />
+                </div>
               </div>
 
               {/* Project Details */}
